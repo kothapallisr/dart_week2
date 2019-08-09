@@ -13,7 +13,6 @@ class Circle {
 
   Circle(double r) {
     radius = r;
-    print("Circle class constructor");
   }
 
   double area() => math.pi * radius * radius;
@@ -24,7 +23,6 @@ class Cylinder extends Circle {
 
   Cylinder(double radius, double height) : super(radius) {
     this.height = height;
-    print("Cylinder class constructor");
   }
 
   double volume() {
