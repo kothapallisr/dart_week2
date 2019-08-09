@@ -5,12 +5,19 @@ class Employee {
   String id;
   String gender;
   String designation;
+
   Employee(String name, String id, String gender, String designation) {
     this.name = name;
     this.id = id;
     this.gender = gender;
     this.designation = designation;
   }
+
+  @override
+  String toString() {
+    return 'Employee{name: $name, id: $id, gender: $gender, designation: $designation}';
+  }
+
   String empDetails() =>
       'name: $this.name \n ID: $this.id\n Gender: $this.gender \n Designation; $this.designation';
 }
@@ -24,7 +31,20 @@ void main() {
   Employee emp5 = new Employee('Pavan', '55555', 'Male', 'Senior Engineer');
 
   var employeeList = List<Employee>();
+  //employeeList.length = 3;
+  //print(employeeList.length);
+
   employeeList.addAll([emp1, emp2, emp3, emp4, emp5]);
+
+  /*for (Employee emp in employeeList) {
+    print(emp.toString());
+  }*/
+  //Employee emp1a = new Employee('Uma', '66666', 'Male', 'Admin');
+  //employeeList[0] = emp1a;
+  /*for (Employee emp in employeeList) {
+    print(emp);
+  }*/
+  print(employeeList.length);
   print('Enter employee ID: ');
   String empID = stdin.readLineSync();
 
@@ -38,6 +58,7 @@ void main() {
           'Designation: ${emp.designation}');
       print('*****************************');
       isFound = true;
+      break;
     }
   }
   if (isFound == false) {

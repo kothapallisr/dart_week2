@@ -3,13 +3,9 @@ import 'dart:math' as math;
 class Circle {
   double radius;
 
-  double areaOfCircle() {
-    return math.pi * radius * radius;
-  }
+  double areaOfCircle() => math.pi * radius * radius;
 
-  double circumferenceOfCircle() {
-    return 2 * math.pi * radius;
-  }
+  double circumferenceOfCircle() => 2 * math.pi * radius;
 
   Circle(double radius) {
     this.radius = radius;
